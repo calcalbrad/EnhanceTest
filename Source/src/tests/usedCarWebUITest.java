@@ -9,11 +9,41 @@ public class usedCarWebUITest {
         WebDriver driver = new ChromeDriver();
 
         // Open TradeMe Sandbox
-        String baseUrl = "https://www.tmsandbox.co.nz/";
+        String baseUrl = "https://www.tmsandbox.co.nz/motors/used-cars/nissan/auction-2149276142.htm";
         driver.get(baseUrl);
 
-        // Really basic test to see if se
-        System.out.println("Title:"+driver.getTitle());
+        // Set the variables we are testing
+        boolean isNumberPlateFound = false;
+        boolean isKilometersFound = false;
+        boolean isBodyFound = false;
+        boolean isSeatsFound = false;
+
+        // Tests in here
+
+        // Results of test
+        if (isNumberPlateFound) {
+            System.out.println("Test Passed!");
+        } else {
+            System.out.println("Test Failed!");
+        }
+
+        if (isKilometersFound) {
+            System.out.println("Test Passed!");
+        } else {
+            System.out.println("Test Failed!");
+        }
+
+        if (isBodyFound) {
+            System.out.println("Test Passed!");
+        } else {
+            System.out.println("Test Failed!");
+        }
+
+        if (isSeatsFound) {
+            System.out.println("Test Passed!");
+        } else {
+            System.out.println("Test Failed!");
+        }
 
         // Close any reference to driver
         driver.close();
