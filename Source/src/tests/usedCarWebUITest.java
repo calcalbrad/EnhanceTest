@@ -1,6 +1,9 @@
 package tests;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.List;
 
 public class usedCarWebUITest {
     public static void main(String[] args) {
@@ -19,6 +22,23 @@ public class usedCarWebUITest {
         boolean isSeatsFound = false;
 
         // Tests in here
+        List<WebElement> motorAtrributes = driver.findElements(By.className("motors-attribute-label"));
+        for (WebElement attribute : motorAtrributes) {
+            switch (attribute.getText()) {
+                case "Number plate":
+                    isNumberPlateFound = true;
+                    break;
+                case "Kilometers":
+                    isKilometersFound = true;
+                    break;
+                case "Body":
+                    isBodyFound = true;
+                    break;
+                case "Seats":
+                    isSeatsFound = true;
+                    break;
+            }
+        }
 
         // Results of test
         if (isNumberPlateFound) {
