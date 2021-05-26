@@ -1,4 +1,4 @@
-package tests;
+package test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +19,18 @@ public class charitiesAPITest {
 
         // Set the variables we are testing
         boolean isStJohnFound = false;
+
+        // Tests in here
+        //List<WebElement> charityDescription = driver.findElements(By.tagName("Description"));
+        List<WebElement> charityDescription = driver.findElements(By.xpath("/CharityCollection/Charity/Description"));
+        for (WebElement charity : charityDescription) {
+            System.out.println(charity.getText());
+            switch (charity.getText()) {
+                case "St John":
+                    isStJohnFound = true;
+                    break;
+            }
+        }
 
         // Results of test
         if (isStJohnFound) {

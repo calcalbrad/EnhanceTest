@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Enhance Test Suite">
+    <test name="Car Web UI Test">
+        <classes>
+            <class name="test.usedCarWebUITest"></class>
+            <class name="test.charitiesAPITest"></class>
+        </classes>
+    </test>
+</suite>

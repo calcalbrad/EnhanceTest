@@ -1,20 +1,30 @@
-package tests;
+package test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterTest;
+
 import java.util.List;
 
 public class usedCarWebUITest {
-    public static void main(String[] args) {
+    String baseUrl = "https://www.tmsandbox.co.nz/motors/used-cars/nissan/auction-2149276142.htm";
+    public WebDriver driver;
+
+    @BeforeTest
+    public void setupTests() {
         // Sets up the Selenium driver to automate Chrome testing
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-
+        driver = new ChromeDriver();
         // Open TradeMe Sandbox
-        String baseUrl = "https://www.tmsandbox.co.nz/motors/used-cars/nissan/auction-2149276142.htm";
         driver.get(baseUrl);
+    }
 
+    @Test
+    public void testCarWebUI() {
         // Set the variables we are testing
         boolean isNumberPlateFound = false;
         boolean isKilometersFound = false;
@@ -41,30 +51,14 @@ public class usedCarWebUITest {
         }
 
         // Results of test
-        if (isNumberPlateFound) {
-            System.out.println("Test Passed!");
-        } else {
-            System.out.println("Test Failed!");
-        }
+        Assert.assertEquals(isNumberPlateFound, true);
+        Assert.assertEquals(isKilometersFound, true);
+        Assert.assertEquals(isBodyFound, true);
+        Assert.assertEquals(isSeatsFound, true);
+    }
 
-        if (isKilometersFound) {
-            System.out.println("Test Passed!");
-        } else {
-            System.out.println("Test Failed!");
-        }
-
-        if (isBodyFound) {
-            System.out.println("Test Passed!");
-        } else {
-            System.out.println("Test Failed!");
-        }
-
-        if (isSeatsFound) {
-            System.out.println("Test Passed!");
-        } else {
-            System.out.println("Test Failed!");
-        }
-
+    @AfterTest
+    public void closeTest() {
         // Close any reference to driver
         driver.close();
     }
