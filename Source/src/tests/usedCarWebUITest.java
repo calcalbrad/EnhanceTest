@@ -28,7 +28,7 @@ public class usedCarWebUITest {
                 case "Number plate":
                     isNumberPlateFound = true;
                     break;
-                case "Kilometers":
+                case "Kilometres":
                     isKilometersFound = true;
                     break;
                 case "Body":
