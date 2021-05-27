@@ -55,7 +55,6 @@ public class charitiesAPITest {
 
         // Check the list to see if St Johns exists
         for (String element : descriptionElements) {
-            System.out.println(element);
             if (element.equals("St John")) {
                 isStJohnFound = true;
             }
