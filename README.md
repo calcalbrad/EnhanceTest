@@ -13,7 +13,7 @@ This project is created with:
 
 ## Setup
 Follow the following steps to setup the tests (for use with IntelliJ):
-1. Install either Eclipse or IntelliJ to your machine. Instructions can be found here: https://www.jetbrains.com/help/idea/installation-guide.html.
+1. Install IntelliJ to your computer. Instructions can be found here: https://www.jetbrains.com/help/idea/installation-guide.html.
 2. Using Git, clone the project into your local repository. Instructions can be found here: https://www.jetbrains.com/help/idea/set-up-a-git-repository.html
 3. Download Selenium using this link: https://www.selenium.dev/downloads/ and scroll down till you find the Selenium Client & WebDriver Language Bindings. Download the version for Java. 
 4. Extract the zip files and put the selenium-java-3.141.59 folder somewhere safe and where you can access later.
