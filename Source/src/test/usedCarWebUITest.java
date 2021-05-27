@@ -24,37 +24,71 @@ public class usedCarWebUITest {
     }
 
     @Test
-    public void testCarWebUI() {
-        // Set the variables we are testing
+    public void areThereNumberPlateDetails() {
+        // Set the variable we are testing
         boolean isNumberPlateFound = false;
+
+        // Tests in here
+        List<WebElement> motorAtrributes = driver.findElements(By.className("motors-attribute-label"));
+        for (WebElement attribute : motorAtrributes) {
+            if(attribute.getText().equals("Number plate")) {
+                isNumberPlateFound = true;
+            }
+        }
+
+        // Results of test
+        Assert.assertEquals(isNumberPlateFound, true, "Contains Number Plate Information");
+    }
+
+    @Test
+    public void areThereKilometerDetails() {
+        // Set the variable we are testing
         boolean isKilometersFound = false;
+
+        // Tests in here
+        List<WebElement> motorAtrributes = driver.findElements(By.className("motors-attribute-label"));
+        for (WebElement attribute : motorAtrributes) {
+            if(attribute.getText().equals("Kilometres")) {
+                isKilometersFound = true;
+            }
+        }
+
+        // Results of test
+        Assert.assertEquals(isKilometersFound, true, "Contains Kilometers Information");
+    }
+
+    @Test
+    public void areThereBodyDetails() {
+        // Set the variable we are testing
         boolean isBodyFound = false;
+
+        // Tests in here
+        List<WebElement> motorAtrributes = driver.findElements(By.className("motors-attribute-label"));
+        for (WebElement attribute : motorAtrributes) {
+            if(attribute.getText().equals("Body")) {
+                isBodyFound = true;
+            }
+        }
+
+        // Results of test
+        Assert.assertEquals(isBodyFound, true, "Contains Body Information");
+    }
+
+    @Test
+    public void areThereSeatsDetails() {
+        // Set the variable we are testing
         boolean isSeatsFound = false;
 
         // Tests in here
         List<WebElement> motorAtrributes = driver.findElements(By.className("motors-attribute-label"));
         for (WebElement attribute : motorAtrributes) {
-            switch (attribute.getText()) {
-                case "Number plate":
-                    isNumberPlateFound = true;
-                    break;
-                case "Kilometres":
-                    isKilometersFound = true;
-                    break;
-                case "Body":
-                    isBodyFound = true;
-                    break;
-                case "Seats":
-                    isSeatsFound = true;
-                    break;
+            if(attribute.getText().equals("Seats")) {
+                isSeatsFound = true;
             }
         }
 
         // Results of test
-        Assert.assertEquals(isNumberPlateFound, true);
-        Assert.assertEquals(isKilometersFound, true);
-        Assert.assertEquals(isBodyFound, true);
-        Assert.assertEquals(isSeatsFound, true);
+        Assert.assertEquals(isSeatsFound, true, "Contains Seats Information");
     }
 
     @AfterTest
