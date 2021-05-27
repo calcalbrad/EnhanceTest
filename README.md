@@ -25,7 +25,7 @@ Follow the following steps to setup the tests (for use with IntelliJ):
 10. Go into each test file and change the System.getProperty value to the location of the ChromeDriver on your computer
 
 ## Running the Program
-Right click on the testng.xml file and select run and the test suite should show up in the console. It will also open Chrome to certain
+Right click on the testng.xml file and select run and the test suite should show up in the console. It will also open Chrome to the web pages listed on the tests so that it can grab test components from the website.
 
 ## Future Works
 * While it does test all the requirements, I would prefer it if it were to test the API calls by creating an XML document within the Java file which I could test. However, since this caused me a lot of issues, I decided to just test the XML document as a String. This probably introduces some code smells and is defiently not best practice so would need to be fixed for future use.
