@@ -5,6 +5,7 @@
         <classes>
             <class name="test.usedCarWebUITest"></class>
             <class name="test.charitiesAPITest"></class>
+            <class name="test.usedCarAPITest"></class>
         </classes>
     </test>
 </suite>

@@ -11,8 +11,9 @@ import org.testng.annotations.AfterTest;
 import java.util.List;
 
 public class usedCarWebUITest {
-    String baseUrl = "https://www.tmsandbox.co.nz/motors/used-cars/nissan/auction-2149276142.htm";
+    public String baseUrl = "https://www.tmsandbox.co.nz/motors/used-cars/nissan/auction-2149276142.htm";
     public WebDriver driver;
+    public List<WebElement> motorAtrributes;
 
     @BeforeTest
     public void setupTests() {
@@ -21,6 +22,9 @@ public class usedCarWebUITest {
         driver = new ChromeDriver();
         // Open TradeMe Sandbox
         driver.get(baseUrl);
+
+        // Set up the attributes for each test
+        motorAtrributes = driver.findElements(By.className("motors-attribute-label"));
     }
 
     @Test
@@ -28,8 +32,7 @@ public class usedCarWebUITest {
         // Set the variable we are testing
         boolean isNumberPlateFound = false;
 
-        // Tests in here
-        List<WebElement> motorAtrributes = driver.findElements(By.className("motors-attribute-label"));
+        // Iterate through the attributes for element
         for (WebElement attribute : motorAtrributes) {
             if(attribute.getText().equals("Number plate")) {
                 isNumberPlateFound = true;
@@ -45,8 +48,7 @@ public class usedCarWebUITest {
         // Set the variable we are testing
         boolean isKilometersFound = false;
 
-        // Tests in here
-        List<WebElement> motorAtrributes = driver.findElements(By.className("motors-attribute-label"));
+        // Iterate through the attributes for element
         for (WebElement attribute : motorAtrributes) {
             if(attribute.getText().equals("Kilometres")) {
                 isKilometersFound = true;
@@ -62,8 +64,7 @@ public class usedCarWebUITest {
         // Set the variable we are testing
         boolean isBodyFound = false;
 
-        // Tests in here
-        List<WebElement> motorAtrributes = driver.findElements(By.className("motors-attribute-label"));
+        // Iterate through the attributes for element
         for (WebElement attribute : motorAtrributes) {
             if(attribute.getText().equals("Body")) {
                 isBodyFound = true;
@@ -79,8 +80,7 @@ public class usedCarWebUITest {
         // Set the variable we are testing
         boolean isSeatsFound = false;
 
-        // Tests in here
-        List<WebElement> motorAtrributes = driver.findElements(By.className("motors-attribute-label"));
+        // Iterate through the attributes for element
         for (WebElement attribute : motorAtrributes) {
             if(attribute.getText().equals("Seats")) {
                 isSeatsFound = true;

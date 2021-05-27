@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class charitiesAPITest {
-    String baseUrl = "https://api.trademe.co.nz/v1/Charities.XML";
+public class usedCarAPITest {
+    String baseUrl = "https://api.trademe.co.nz/v1/Categories/0001-0268-0316-/Details.XML";
     public WebDriver driver;
 
     @BeforeTest
@@ -27,7 +27,7 @@ public class charitiesAPITest {
     }
 
     @Test
-    public void isStJohnsThere() {
+    public void charitiesAPITest() {
         // Set the variables we are testing
         boolean isStJohnFound = false;
 
@@ -39,7 +39,7 @@ public class charitiesAPITest {
         //     check as a String, which I know is a bit smelly
 
         // Create a regex pattern to only take info in between description tags
-        String pattern1 = "<Description>";
+        String pattern1 = "<Attribute><Description>";
         String pattern2 = "</Description>";
         String regexString = Pattern.quote(pattern1) + "(.*?)" + Pattern.quote(pattern2);
         Pattern pattern = Pattern.compile(regexString);
