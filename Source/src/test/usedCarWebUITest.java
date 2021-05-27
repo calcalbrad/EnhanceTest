@@ -10,6 +10,9 @@ import org.testng.annotations.AfterTest;
 
 import java.util.List;
 
+/**
+ * Goes through the 2017 Nissan Navara Warrior 4x4 and check if it has the desired attributes
+ */
 public class usedCarWebUITest {
     public String baseUrl = "https://www.tmsandbox.co.nz/motors/used-cars/nissan/auction-2149276142.htm";
     public WebDriver driver;

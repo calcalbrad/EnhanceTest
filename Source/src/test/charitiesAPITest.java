@@ -13,6 +13,9 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Goes through the charities API call as they all contain the desired attributes
+ */
 public class charitiesAPITest {
     String baseUrl = "https://api.trademe.co.nz/v1/Charities.XML";
     public WebDriver driver;
