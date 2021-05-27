@@ -27,7 +27,8 @@ Follow the following steps to setup the tests:
 CHROMEDRIVER
 
 ## Future Works
-While it does test all the requirements, I would prefer it if it were to test the API calls by creating an XML document within the Java file which I could test. However, since this caused me a lot of issues, I decided to just test the XML document as a String. This probably introduces some code smells and is defiently not best practice so would need to be fixed for future use.
+* While it does test all the requirements, I would prefer it if it were to test the API calls by creating an XML document within the Java file which I could test. However, since this caused me a lot of issues, I decided to just test the XML document as a String. This probably introduces some code smells and is defiently not best practice so would need to be fixed for future use.
+* Make it easier to swtich between IDEs
 
 ## Sources Used
 Mainly followed the tutorial at: https://www.guru99.com/selenium-tutorial.html in order to learn how to use Selenium. Also used the Java & Selenium Docs for the rest of it.
